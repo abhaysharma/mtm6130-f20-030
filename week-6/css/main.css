@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: darkslategrey;
+  background-image: url("../images/white_brick_wall.png");
 }
 
 /* 
@@ -35,6 +36,8 @@ nav ul {
 nav ul a {
   color: darkslategrey;
   text-decoration: none;
+  font-size: 1.75rem;
+  /* 1.75rem = 1.75 x 16 = 28px */
 }
 
 /* Selecting HTML element with class name */
@@ -46,7 +49,19 @@ nav ul a {
 
 /* Selecting HTML element with id value */
 #tow {
-  background: orange;
+  background: orange url("../images/bread.jpg") no-repeat center center;
+  background-size: cover;
+  /* adding styles to make text readable */
+  color: white;
+  /* font-size: 24px; */
+  /* updating font size to rem */
+  font-size: 1.5rem;
+  /* 1.5rem = 1.5  X 16px = 24px */
+
+  /* adding padding to add space between the border and content */
+  padding: 1em;
+  /* 1em = 1 x 24px = 24px */
+  width: 50vw;
 }
 
 .large-text {
@@ -175,7 +190,26 @@ footer.site-footer {
 }
 
 /* 0102 */
-#tow dl dt {}
+/* #tow dl dt {} */
 
 /* 0112 */
-#tow dl dt.first {}
+/* #tow dl dt.first {} */
+
+section p {
+  width: 50%;
+  height: 100px;
+
+  /* padding: 1em; */
+
+  /* top right bottom left */
+  /* padding: 1em .5em 1em .5em; */
+
+  /* top-bottom left-right */
+  padding: 1em .5em;
+
+  /* margin: 2em; */
+  margin: -1em 2em 2em 2em;
+
+  /* border: 2px solid black; */
+  border-left: 6px solid black;
+}

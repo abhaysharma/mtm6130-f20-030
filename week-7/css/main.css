@@ -29,6 +29,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: darkslategrey;
   background-image: url("../images/white_brick_wall.png");
+
+  /* EX 5 - fixing the overlapping heading */
   padding-top: 92px;
 }
 
@@ -59,15 +61,25 @@ nav ul {
   list-style: none;
 }
 
+/* EX 1 - Display and Box-Sizing */
 nav ul li {
+  /* EX 1 -when we add display: inline-block the elements show next to each other */
   display: inline-block;
+
+  /* EX 1 -Adding a width will work as the display is set to inline block */
   width: 49%;
+
+  /* EX 1 -now adding padding will increase the total width */
   padding: 1em;
 
+  /* EX 1 -We can add box-sizing to calculate the width including the padding */
   box-sizing: border-box;
+
+  /*  adding separator border between list items */
   border-right: 1px solid white;
 }
 
+/* removing the border separator from the last list item */
 nav ul li:last-child {
   border: none;
 
@@ -76,6 +88,7 @@ nav ul li:last-child {
 /* Selecting child elements multiple level */
 
 nav ul a {
+  /* EX 1 -when we add display: block the anchor tags take full width of their parent */
   display: block;
   color: darkslategrey;
   text-decoration: none;
@@ -84,15 +97,21 @@ nav ul a {
 }
 
 /* Selecting HTML element with class name */
+/* EX 2 - display inline-block */
 .orange-link {
+  /* EX 2 -adding padding overlaps the links  */
   padding: 1.5em;
+  /* EX 2 -width will have no effect without display inline-block or block */
   width: 300px;
+  /* EX 2 -Adding inline-block fixes the padding issue */
   display: block;
 
   background: darkslategrey;
   color: orange;
   text-decoration: none;
 }
+
+/* EX 3 - Float */
 
 /* creating a two column layout using float */
 article,
@@ -109,6 +128,8 @@ aside {
   width: 20%;
 }
 
+/* EX 3 -fixing the side effect of float */
+
 section {
   clear: both;
 }
@@ -119,11 +140,12 @@ img {
 }
 
 /* stop the container at a max width and center on the page */
-
 .container {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+/* EX 4 - Position */
 
 .orange-link.large-text {
   position: absolute;
@@ -131,7 +153,9 @@ img {
   bottom: 0;
 }
 
+
 /* Selecting HTML element with id value */
+/* EX 4 -Absolute positioning based on relative element */
 #tow {
   /* adding position for keeping the child element in the container */
   position: relative;
@@ -145,6 +169,7 @@ img {
   /* 1.5rem = 1.5  X 16px = 24px */
 
   /* adding padding to add space between the border and content */
+  /* EX 4 -adding additional padding at the bottom */
   padding: 1em 1em 3em 1em;
   /* 1em = 1 x 24px = 24px */
   width: 50vw;
@@ -185,12 +210,15 @@ h3+ul {
   text-transform: uppercase;
 }
 
+/* EX 5 - navigation fixed */
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
+  /* EX 5 -to fix the stacking order we area adding z-index */
+  /* EX 5 -even though 1 will do we use 999 to be safe */
   z-index: 999;
 }
 

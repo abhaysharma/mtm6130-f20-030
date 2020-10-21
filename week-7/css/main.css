@@ -64,6 +64,12 @@ nav ul li {
   padding: 1em;
 
   box-sizing: border-box;
+  border-right: 1px solid white;
+}
+
+nav ul li:last-child {
+  border: none;
+
 }
 
 /* Selecting child elements multiple level */
@@ -85,6 +91,37 @@ nav ul a {
   background: darkslategrey;
   color: orange;
   text-decoration: none;
+}
+
+/* creating a two column layout using float */
+article,
+aside {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
+  padding: 1.5em;
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+}
+
+aside {
+  width: 20%;
+}
+
+section {
+  clear: both;
+}
+
+/* making the images take 100% width of the parent element */
+img {
+  width: 100%;
+}
+
+/* stop the container at a max width and center on the page */
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 /* Selecting HTML element with id value */

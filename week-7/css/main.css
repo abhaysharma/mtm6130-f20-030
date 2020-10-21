@@ -29,6 +29,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: darkslategrey;
   background-image: url("../images/white_brick_wall.png");
+  padding-top: 92px;
 }
 
 /* 
@@ -124,8 +125,16 @@ img {
   margin: 0 auto;
 }
 
+.orange-link.large-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 /* Selecting HTML element with id value */
 #tow {
+  /* adding position for keeping the child element in the container */
+  position: relative;
   background: orange url("../images/bread.jpg") no-repeat center center;
   background-size: cover;
   /* adding styles to make text readable */
@@ -136,7 +145,7 @@ img {
   /* 1.5rem = 1.5  X 16px = 24px */
 
   /* adding padding to add space between the border and content */
-  padding: 1em;
+  padding: 1em 1em 3em 1em;
   /* 1em = 1 x 24px = 24px */
   width: 50vw;
 }
@@ -174,6 +183,21 @@ h3+ul {
 
 [target="_blank"] {
   text-transform: uppercase;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Using Pseudo Classes
